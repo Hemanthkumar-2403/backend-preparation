@@ -16,7 +16,30 @@ app.post("/signup",(req,res)=>{
     })
 })
 
-const port =process.env.port || 4000
+// UPDATE user
+app.put("/users/:id", (req, res) => {
+  const userId = req.params.id;
+  const updatedData = req.body;
+
+  res.json({
+    message: "User updated successfully",
+    userId: userId,
+    updatedData: updatedData
+  });
+});
+
+// DELETE user
+app.delete("/users/:id", (req, res) => {
+  const userId = req.params.id;
+
+  res.json({
+    message: "User deleted successfully",
+    userId: userId
+  });
+});
+
+
+const port =process.env.PORT || 4000
 
 app.listen(port ,()=>{
     console.log(`Server is running on port ${port}`);
