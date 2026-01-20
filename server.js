@@ -2,8 +2,22 @@
 const express = require("express")
 const app=express()
 require("dotenv").config()
-
 app.use(express.json())
+
+//fake database
+let users = [
+  {
+    id: "101",
+    name: "hemanth",
+    email: "hemanth@123gmail.com"
+  },
+  {
+    id: "102",
+    name: "kumar",
+    email: "kumar@gmail.com"
+  }
+];
+
 app.get("/health" ,(req,res)=>{
     res.send("Server is running")
 });
