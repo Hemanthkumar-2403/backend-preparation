@@ -54,7 +54,7 @@ app.get("/users/:id",(req,res)=>{
 })
 
 //update
-app.put("/users/id",(req,res)=>{
+app.put("/users/:id",(req,res)=>{
   const{name,email}=req.body;
   const user = users.find(u=>u.id === req.params.id);
   if(!user){
@@ -76,7 +76,7 @@ app.put("/users/id",(req,res)=>{
 })
 
 //Delete
-app.delete("users/:id",(req,res)=>{
+app.delete("/users/:id",(req,res)=>{
   const index =users.findIndex(u=>u.id === req.params.id)
   if(index ===-1){
     return res.status(404).json({
