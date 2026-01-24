@@ -1,8 +1,5 @@
-// fake database (same as before)
-let users = [
-  { id: "101", name: "hemanth", email: "hemanth@123gmail.com" },
-  { id: "102", name: "kumar", email: "kumar@gmail.com" }
-];
+
+const users =require("../data/userData")
 
 // GET /users
 const getAllUsers = (req, res) => {
