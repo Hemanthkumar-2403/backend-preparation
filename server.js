@@ -5,22 +5,15 @@ require("dotenv").config()
 app.use(express.json())
 const healthRoutes=require("./routes/healthRoutes")
 const userRoutes=require("./routes/usersRoutes")
-
-
-//signup
-app.post("/signup",(req,res)=>{
-    const data =req.body;
-    res.json({
-        message :"Signup sucess",
-        data :data,
-    })
-})
+const authRoutes=require("./routes/authRoutes")
 
 
 // routes
 app.use(healthRoutes)
 //userRoutes
 app.use(userRoutes)
+//authRoutes
+app.use(authRoutes)
 
 
 const port=process.env.PORT ||4000;
