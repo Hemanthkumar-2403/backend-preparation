@@ -11,6 +11,18 @@ const users = [
     name: "kumar",
     email: "kumar@gmail.com",
     password: "123456"
+  },
+  {
+    id: "103",
+    name: "gopi",
+    email: "gopi@gmail.com",
+    password: "123456"
+  },
+  {
+    id: "104",
+    name: "vinay",
+    email: "vinay@gmail.com",
+    password: "123456"
   }
 ];
 
